@@ -1,6 +1,5 @@
 
 const baseUrl= "https://dummyjson.com";
-
 const ApiFunctions = {
     getProductList(extraUrl){
         var url = baseUrl+extraUrl;

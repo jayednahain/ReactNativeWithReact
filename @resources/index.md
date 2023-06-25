@@ -1,3 +1,5 @@
+- #28 CLASS VS HOOKS
+    - 
 - #31 setState and shallow Marge
     - setState shallow marge to the current state object 
     - shallow will look for any key that exist in the current state object. and update with new value
@@ -28,3 +30,4 @@
             - react knows this component is different i need to re-render
         -  
 - (#44) - 
+- (#54) - 
