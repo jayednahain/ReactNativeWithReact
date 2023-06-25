@@ -26,4 +26,5 @@
     - after consoling with life cycle we see render method runs twice
         - the moment need to changes state , we called setState
             - react knows this component is different i need to re-render
-        -  39->3.14
+        -  
+- (#44) - 
