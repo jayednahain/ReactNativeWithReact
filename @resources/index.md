@@ -30,4 +30,9 @@
             - react knows this component is different i need to re-render
         -  
 - (#44) - 
-- (#54) - 
+- (#57) - pure and impure function
+    - pure function
+        - return exect same things when its given a same argument
+    - impure function
+        -  if its modify or relay on something out side of its scope
+            -  functional component will create impure functionality

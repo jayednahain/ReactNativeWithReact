@@ -63,8 +63,8 @@ export default class AllProduct extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        paddingHorizontal: 10,
-        paddingVertical: 10
+        // paddingVertical:20
+       
     },
 
 })
