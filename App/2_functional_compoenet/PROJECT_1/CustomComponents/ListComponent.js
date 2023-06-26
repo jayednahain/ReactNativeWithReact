@@ -6,8 +6,11 @@ import EmptyCompoenet from './EmptyCompoenet';
 export default function ListComponent(pros) {
     let {products} = pros;
     // console.log(JSON.stringify(pros))
+  
+
   return (
-       <FlatList
+    <FlatList
+        contentContainerStyle={{ zIndex: 1 }}
             key={(item, index) => index}
             numColumns={3}
             keyExtractor={(item, index) => index}
