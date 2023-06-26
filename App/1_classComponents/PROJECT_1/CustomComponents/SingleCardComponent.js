@@ -118,15 +118,18 @@ function geStars(rating) {
 
 const styles = StyleSheet.create({
   triangleCorner: {
-    transform: [{ rotate: "90deg" }],
-    width: 0,
-    height: 0,
-    backgroundColor: "transparent",
-    borderStyle: "solid",
-    borderRightWidth: 100,
-    borderTopWidth: 100,
-    borderRightColor: "transparent",
-    borderTopColor: "red",
+    // width: 0,
+    // height: 0,
+    backgroundColor: 'transparent',
+    borderStyle: 'solid',
+    borderRightWidth: 50,
+    borderTopWidth: 50,
+    borderRightColor: 'transparent',
+    borderTopColor: 'red',
+    transform: [
+      {rotate: '90deg'}
+    ]
+  
   },
   // triangleCornerTopRight: {
   //   transform: [{ rotate: "90deg" }],
@@ -145,41 +148,38 @@ const styles = StyleSheet.create({
   }
   ,
   container: {
-    backgroundColor: 'yellow',
     // position: 'absolute',
-    zIndex: 1,
+    zIndex: 0,
     flex:1,
-    // padding: 5,
+    padding: 5,
     margin: 5,
-    // borderWidth: 0.5,
-    // borderTopRightRadius: 13,
-    // borderBottomLeftRadius: 13,
-    // // elevation: 3,
-    // alignItems:'center'
+    borderWidth: 0.5,
+    borderTopRightRadius: 13,
+    borderBottomLeftRadius: 13,
+    elevation: 3,
+    alignItems:'center'
     },
   zoomOut: {
-    // flex:1,
-    // paddingHorizontal:10,
-    backgroundColor:'black',
+    backgroundColor:'white',
+    paddingHorizontal:10,
     position: 'absolute',
-    top: 50,
-    // zIndex: 2,
+    zIndex: 9,
     elevation: 10,
-    // width: "98%",
-    height:"110%",
-    // padding: 5,
-    // margin: 5,
-    // borderWidth: 0.5,
-    // borderTopRightRadius: 13,
-    // borderBottomLeftRadius: 13,
-    // elevation: 3,
-    // alignItems:'center'
+    width: "98%",
+    height:"100%",
+    padding: 5,
+    margin: 5,
+    borderWidth: 0.5,
+    borderTopRightRadius: 13,
+    borderBottomLeftRadius: 13,
+    elevation: 3,
+    alignItems:'center'
     },
     imageStyle: {
       width: 100,
       height: 100,
       marginTop: 5,
-      // elevation: 3,
+      elevation: 3,
       borderWidth:0.5
   },
   imageStyleZoom: {
