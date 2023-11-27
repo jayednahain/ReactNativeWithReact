@@ -1,10 +1,10 @@
 import React from 'react'
-import { View } from 'react-native'
+import { Text, View } from 'react-native'
 import AllProduct from './2_functional_compoenet/PROJECT_1/product'
 export default function MyApp() {
     return (
         <View>
-            <AllProduct/>
+            <Text>hellow</Text>
         </View>
   )
 }
