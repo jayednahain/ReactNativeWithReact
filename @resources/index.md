@@ -36,3 +36,22 @@
     - impure function
         -  if its modify or relay on something out side of its scope
             -  functional component will create impure functionality
+- (#58)- Hooks - useState
+    - created 2_functional_component directory for building project in functional component
+    - useState hok
+        - useState gives us the ability to encapsulate local state in a functional component 
+        - for using useState() we need to use array dis-structure
+        - assigns two variables inside a array
+            - (#58)-1
+            - useStat return us a array
+            - [value , setValue]
+                - class component it was object
+            - but functional component it is individual value
+            - for multiple value we need multiple useState()
+                - each hook just hook one value
+            -  [ valueOne, valueTwo ]
+                - under the hood react will check "valueOne" this state value is updated or not
+
+- (#60) - infinite re-rendering 
+    - setting up product list data
+    - (#60)-1 empty list because we want want to run this effect just for one time when the component is inillitize 

@@ -2,11 +2,11 @@ import { StyleSheet, Text, TextInput, View } from 'react-native'
 import React from 'react'
 
 const CustomSearchBox = (props) => {
-    let {onSearchHandler} = props;
+    let {onSearchHandler,placeholder} = props;
   return (
     <TextInput
         onChangeText={onSearchHandler}
-        placeholder='Search Product'
+        placeholder={placeholder}
         style={styles.textInputStyle}
     ></TextInput>
   )

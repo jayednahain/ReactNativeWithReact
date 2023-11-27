@@ -1,0 +1,17 @@
+{
+    "categories":[
+        {
+            "id":1,
+            "title":"men"
+        },
+        {
+            "id":1,
+            "title":"woman"
+        },
+        {
+            "id":1,
+            "title":"sneakers"
+        }
+        
+    ]
+}

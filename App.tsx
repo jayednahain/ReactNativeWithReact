@@ -17,6 +17,8 @@ import SteStateWorkFlow from './App/1_classComponents/1_setStateWorkFlow';
 import ComponentDidMountUseWithApi from './App/1_classComponents/2_componentDidMountUseWithApi';
 
 import MyApp from './App/myApp';
+// capstone project
+import CapstoneApp from './App/capstoneProject/CapstoneApp';
 
 
 
@@ -35,6 +37,7 @@ function App(): JSX.Element {
 
     // </View>
     <MyApp/>
+    // <CapstoneApp/>
   );
 }
 
