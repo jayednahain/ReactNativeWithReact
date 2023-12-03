@@ -1,6 +1,6 @@
 import { INCREMENT } from "./actionsTypes";
 import { DECREMENT } from "./actionsTypes";
-
+//2.1
 export const incrementCreator =(value)=>{
     return {
         type:INCREMENT,

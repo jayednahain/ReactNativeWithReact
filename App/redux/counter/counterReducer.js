@@ -3,7 +3,7 @@ import { INCREMENT,DECREMENT } from "./actionsTypes";
 const initialState ={
     value:0
 };
-
+//2.2
 const counterReducer = (state= initialState,action)=>{
     switch (action.type) {
         case INCREMENT:

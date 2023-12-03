@@ -1,39 +1,6 @@
-- #28 CLASS VS HOOKS
-    - 
-- #31 setState and shallow Marge
-    - setState shallow marge to the current state object 
-    - shallow will look for any key that exist in the current state object. and update with new value
-- #32 setState and secondary callback
-    - (#32-1)
-    - setState in asynchronous call
-    - console log synchronous call
-        - when console log is called the state might not be updated
-    - (#32-2) stateState takes two different argument
-    - (#32-3) in 1st parameter we can update state using returning
-        - 2nd parameter callback will run after update the state
-    - (#32-4) we can state inside , 1st argument callback parameter
-- (#37) Life cycle method componentDidMount
-    - componentDidMount
-        - mounting is the frist time a componenet gets placed into DOM
-        - so the first time react renders a component into the page is mounting
-        - it only happens once
-        - its specially used on api calling
-- (#39) renders and re-renders react
-    - life cycle
-        - 1. constructor() run first
-            - we initialize states on constructor
-        - 2. render() runs then
-            - renders determine what to show
-        - 3. componentDidMount() runs next
-    - after consoling with life cycle we see render method runs twice
-        - the moment need to changes state , we called setState
-            - react knows this component is different i need to re-render
-        -  
-- (#44) - 
-- (#57) - pure and impure function
-    - pure function
-        - return exect same things when its given a same argument
-    - impure function
-        -  if its modify or relay on something out side of its scope
-            -  functional component will create impure functionality
-----------------------------------------------------------------------
+2.1
+- creating actions and actions creators
+2.2
+- creating reducer
+2.3
+- creating store

@@ -2,21 +2,18 @@
 
 import React from 'react';
 import type {PropsWithChildren} from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  View,
-} from 'react-native';
-
-import {
-} from 'react-native/Libraries/NewAppScreen';
+import { Provider } from 'react-redux';
+import store from './App/redux/store';
 
 
 import MyApp from './App/myApp';
 
 function App(): JSX.Element {
   return (
-    <MyApp/>
+    <Provider store={store }>
+      <MyApp/>
+    </Provider>
+    
   );
 }
 
