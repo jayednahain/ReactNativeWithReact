@@ -36,3 +36,4 @@
     - impure function
         -  if its modify or relay on something out side of its scope
             -  functional component will create impure functionality
+----------------------------------------------------------------------
