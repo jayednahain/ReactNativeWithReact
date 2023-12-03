@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { FlatList, Text, TouchableOpacity, View } from 'react-native'
 import ModalBuilder from './components/modalBuilder'
+import { Button } from '@rneui/base'
 
 export default function MyApp() {
     return (
@@ -62,9 +63,14 @@ class YourClassComponent extends Component {
             { "name": "jayed Khan", "id": 26 }
         ],
         selectedItems: [],
+        counter: 0,
       };
     }
-  
+
+    handleReset = () => {
+      this.setState({ selectedItems: [], counter: 0 });
+    };
+
     renderItem = ({ item }) => (
         <ListItem
           item={item}
@@ -80,12 +86,22 @@ class YourClassComponent extends Component {
       } else {
         selectedItems.push(item.id);
       }
-      this.setState({ selectedItems });
+      this.setState({ selectedItems, counter: selectedItems.length });
     };
+
+    header = ()=>{
+      return(
+        <View style={{ flexDirection: 'row', justifyContent: 'space-between', padding: 10 }}>
+        <Text>Selected Items: {this.state.counter}</Text>
+        <Button title="Reset" onPress={this.handleReset} />
+      </View>
+      )
+    }
   
     render() {
       return (
         <FlatList
+        ListHeaderComponent={this.header(0)}
           data={this.state.data}
           renderItem={this.renderItem}
           keyExtractor={(item) => item.id.toString()}
