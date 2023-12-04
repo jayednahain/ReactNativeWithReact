@@ -48,26 +48,19 @@ export class CollapseCard extends Component {
 
   collapsedContent =()=>{
 	const { stopLocation , startLocation, endLocation } = this.props;
-    const { isCollapsed } = this.state;
 	return(
-		
-		// <View>
-			typeof stopLocation != 'undefined'? <Text>
-			{stopLocation}
-			</Text> : <View>
+		typeof stopLocation != 'undefined'? <Text>
+			{stopLocation}</Text> : 
+			<View>
 				{this.showRoundedNumber('১','ডিআইটি প্রজেক্ট, মেরুল বাড্ডা')}
 				{this.showRoundedNumber('২','ডিআইটি প্রজেক্ট, মেরুল বাড্ডা')}
-			
 			</View>
-
-		// </View>
 	);
   }
 
 
   render() {
-    const { title, content , stopLocation , startLocation, endLocation,
-		startTime,endTime
+    const { title, 
 	} = this.props;
     const { isCollapsed } = this.state;
 
