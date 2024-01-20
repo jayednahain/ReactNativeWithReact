@@ -19,7 +19,9 @@ function Counter({count,increment,decrement}) {
 }
 
 //## 2.4.1
-const mapStateToProps = (state)=>{
+const mapStateToProps = (state,ownProps)=>{
+  //## 2.4.4 
+  console.log(ownProps)
   console.log("current state: "+ JSON.stringify(state))
 
   // return object from here
