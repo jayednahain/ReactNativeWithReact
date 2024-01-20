@@ -5,7 +5,7 @@ export default function MyApp() {
     return (
         <View>
             <Text>hellow</Text>
-			<Counter counter={10}/>
+			<Counter />
         </View>
   )
 }
