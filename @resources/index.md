@@ -4,13 +4,14 @@
 - creating reducer
 # 2.3
 - creating store
+
 # 2.4
-- connect with store
-- redux connect()
-- connect is a <strong>higher order function</strong>  , connect will return a higher order component .
-- A higher order component is a function that takes a component as parameter and returns a new component.
-- connect takes two arguments
-    - mapStateToProps , mapDispatchToProps
+- connect()() - is a higher order function
+- connect()() - () using second brackets we are calling higher order function !
+- on second () we will pass a component !
+- higher order function takes a component as a argument
+- on first brackets it takes two argument
+- mapStateToProps , mapDispatchToProps
     ## 2.4.1
     - mapStateToProps
         - convert state to prop , concert state to map
