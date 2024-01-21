@@ -25,4 +25,9 @@
     - what happen if we sending props from parent component
     ## 2.4.4
     -  on mapStateToProps function we are sending a extra param name ownProps , with this we will get the current component props
-    
+
+# 2.5 using hooks
+- useSelector()
+- Hook always declare in function top label
+- here selector means something you can select from state
+- it wants a functions , using my custom function it will select something
