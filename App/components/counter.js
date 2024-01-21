@@ -1,8 +1,31 @@
 import { Button, StyleSheet, Text, View } from 'react-native'
 import React from 'react';
 import styles from './style';
-import { connect, useSelector } from 'react-redux';
+import { connect, useDispatch, useSelector } from 'react-redux';
 import { decrementActionCreator, incrementActionCreator } from '../redux/counter/actionsCreators';
+
+export default function CounterHook() {
+    const count = useSelector((state)=> state.value)
+    const dispatch = useDispatch();
+
+    const incrementHandler = (value)=>{
+        dispatch(incrementActionCreator(value))
+    }
+
+    const decrementHandler = (value)=>{
+        dispatch(decrementActionCreator(value))
+    }
+    return (
+        <View>
+            <Text style={[styles.font22, styles.borderPaddingMargin10]}>{count}</Text>
+            <View style={styles.paddingMargin10}>
+                <Button onPress={()=>incrementHandler(5)} color={'blue'} title='increment'></Button>
+                <Button onPress={()=>decrementHandler(2)} color={'red'} title='decrement'></Button>
+            </View>
+
+        </View>
+    )
+}
 
 // function Counter({count,increment,decrement}) {
 //   // let  = props;
@@ -46,17 +69,5 @@ import { decrementActionCreator, incrementActionCreator } from '../redux/counter
 // export default connect(mapStateToProps,mapDispatchToProps)(Counter);
 
 
-export default function CounterHook() {
-    const count = useSelector((state)=> state.value)
-    return (
-        <View>
-            <Text style={[styles.font22, styles.borderPaddingMargin10]}>{count}</Text>
-            <View style={styles.paddingMargin10}>
-                <Button onPress={()=>{}} color={'blue'} title='increment'></Button>
-                <Button onPress={()=>{}} color={'red'} title='decrement'></Button>
-            </View>
 
-        </View>
-    )
-}
 
