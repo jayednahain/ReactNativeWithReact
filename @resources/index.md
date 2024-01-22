@@ -1,33 +1,38 @@
 # 2.1
-- creating actions and actions creators
+- Creating actions and action creators
+
 # 2.2
-- creating reducer
+- Creating reducer
+
 # 2.3
-- creating store
+- Creating store
 
 # 2.4
-- connect()() - is a higher order function
-- connect()() - () using second brackets we are calling higher order function !
-- on second () we will pass a component !
-- higher order function takes a component as a argument
-- on first brackets it takes two argument
-- mapStateToProps , mapDispatchToProps
-    ## 2.4.1
-    - mapStateToProps
-        - convert state to prop , concert state to map
-        - will get current redux state (default state we define) 
-    ## 2.4.2
-    - mapDispatchToProps
-        - convert dispatch to props
-    ## 2.4.3
-    - currently in counter component we are sending a controlling the props using the connect function from store.
-    - comparing with class component we are just controlling the state using the redux
-    - what happen if we sending props from parent component
-    ## 2.4.4
-    -  on mapStateToProps function we are sending a extra param name ownProps , with this we will get the current component props
+- `connect()()` - a higher-order function
+- `connect()()` - by using the second set of brackets, we are calling the higher-order function!
+- On the second set of brackets, we will pass a component.
+- A higher-order function takes a component as an argument.
+- On the first set of brackets, it takes two arguments: `mapStateToProps` and `mapDispatchToProps`.
+  ## 2.4.1
+  - `mapStateToProps`
+    - Converts state to props, converts state to a map.
+    - Will get the current Redux state (default state we define).
+  ## 2.4.2
+  - `mapDispatchToProps`
+    - Converts dispatch to props.
+  ## 2.4.3
+  - Currently, in the counter component, we are controlling the props using the `connect` function from the store.
+    - Comparing with a class component, we are just controlling the state using Redux.
+    - What happens if we send props from the parent component?
+  ## 2.4.4
+  - On the `mapStateToProps` function, we are sending an extra parameter named `ownProps`; with this, we will get the current component props.
 
-# 2.5 using hooks
-- useSelector()
-- Hook always declare in function top label
-- here selector means something you can select from state
-- it wants a functions , using my custom function it will select something
+# 2.5 Using Hooks
+- `useSelector()`
+- Hooks should always be declared at the top of the function.
+- Here, "selector" means something you can select from the state.
+- It wants a function; using my custom function, it will select something.
+
+# 2.6 `useDispatch`
+
+# 2.7 Running Dynamic Counter
