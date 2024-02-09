@@ -5,8 +5,7 @@ export default function MyApp() {
     return (
         <View>
             <Text>hellow</Text>
-			{/* <Counter id={1} /> */}
-            <CounterHook id={1} />
+			
         </View>
   )
 }
