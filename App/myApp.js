@@ -1,11 +1,10 @@
 import React from 'react'
 import { Text, View } from 'react-native'
-import CounterHook from './components/counter'
+import HomePage from './HomePage'
 export default function MyApp() {
     return (
         <View>
-            <Text>hellow</Text>
-			
+            <HomePage/>
         </View>
   )
 }
