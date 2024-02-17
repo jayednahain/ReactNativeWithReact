@@ -2,7 +2,9 @@
     "cSpell.words": [
         "ALLCOMPLETED",
         "CLEARCOMPLETED",
+        "COLORCHANGED",
         "COLORSELECTED",
+        "STATUSCHANGED",
         "todos"
     ]
 }

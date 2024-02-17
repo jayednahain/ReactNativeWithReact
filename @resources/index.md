@@ -24,3 +24,12 @@
 - here we are returning / getting those items which are not complete
 - filtering the items which are not completed
 - so incomplete items will be will ignored
+
+
+### //3.4-1
+- there will two change type
+- added and remove
+- 1st time press added , and again press it will remove
+
+### //3.4-2
+- while removing we need to check the color is already existed or not?
