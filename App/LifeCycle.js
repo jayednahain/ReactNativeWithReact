@@ -1,4 +1,4 @@
-import { Text, StyleSheet, View } from 'react-native'
+import { Text, StyleSheet, View, Animated } from 'react-native'
 import React, { Component } from 'react'
 
 export default class LifeCycle extends Component {
@@ -8,11 +8,21 @@ export default class LifeCycle extends Component {
         this.state = {}
         
     }
+
+    roundCircle = () => {
+        return (
+            <View style={{ width: 100, height: 100, backgroundColor: 'black', borderRadius: 100 / 2 }}>
+                
+            </View>
+        )
+    }
     render() {
         console.log("2. render called");
         return (
             <View>
-                <Text>LifeCycle</Text>
+                <Animated.View>
+                    {this.roundCircle()}
+                </Animated.View>
             </View>
         )
     }
