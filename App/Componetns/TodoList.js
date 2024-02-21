@@ -1,12 +1,19 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import Todo from './Todo'
+import { useSelector } from 'react-redux'
 
 export default function TodoList() {
+
+    const todoList = useSelector((state) => state.todos)
+
     return (
-        <View>
+        <View style={{}}>
             <Text>TodoList</Text>
-            <Todo/>
+            {todoList.map((todo) => (
+                <Todo todo={todo} key={todo.id} />
+            ))}
+
         </View>
     )
 }

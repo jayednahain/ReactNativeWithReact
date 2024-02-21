@@ -2,6 +2,7 @@ import { COLORCHANGED, STATUSCHANGED } from "./ActionsTypes";
 import initialState from "./InitialState";
 
 const reducer = (state = initialState, action) => {
+    console.warn("reducer slice")
     switch (action.type) {
         case STATUSCHANGED:
             return {

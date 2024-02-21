@@ -33,3 +33,6 @@
 
 ### //3.4-2
 - while removing we need to check the color is already existed or not?
+
+### //3.5 create store
+- root reducer we will combine files
