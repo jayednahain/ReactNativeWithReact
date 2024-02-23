@@ -7,45 +7,89 @@ import {
     TOGGLED,
 } from "./ActionsType";
 
-export const added = (todoText) => {
-    return {
+// export const added = (todoText) => {
+//     return {
+//         type: ADDED,
+//         payload: todoText,
+//     };
+// };
+
+// export const toggled = (todoId) => {
+//     console.warn("toggled")
+//     return {
+//         type: TOGGLED,
+//         payload: todoId,
+//     };
+// };
+
+// export const colorSelected = (todoId, color) => {
+//     return {
+//         type: COLORSELECTED,
+//         payload: {
+//             todoId,
+//             color,
+//         },
+//     };
+// };
+
+// export const deleted = (todoId) => {
+//     return {
+//         type: DELETED,
+//         payload: todoId,
+//     };
+// };
+
+// export const allCompleted = () => {
+//     return {
+//         type: ALLCOMPLETED,
+//     };
+// };
+
+// export const clearCompleted = () => {
+//     return {
+//         type: CLEARCOMPLETED,
+//     };
+// };
+
+
+
+const withLog = (actionCreator, actionName)  => (...args) => {
+    console.warn(`${actionName} action  called`);
+    return actionCreator(...args);
+};
+
+const TodoActions = {
+    added: withLog((todoText) => ({
         type: ADDED,
         payload: todoText,
-    };
-};
+    }), 'added'),
 
-export const toggled = (todoId) => {
-    return {
+    toggled: withLog((todoId) => ({
         type: TOGGLED,
         payload: todoId,
-    };
-};
+    }), 'toggled'),
 
-export const colorSelected = (todoId, color) => {
-    return {
+    colorSelected: withLog((todoId, color) => ({
         type: COLORSELECTED,
         payload: {
             todoId,
             color,
         },
-    };
-};
+    }), 'colorSelected'),
 
-export const deleted = (todoId) => {
-    return {
+    deleted: withLog((todoId) => ({
         type: DELETED,
         payload: todoId,
-    };
-};
+    }), 'deleted'),
 
-export const allCompleted = () => {
-    return {
+    allCompleted: withLog(() => ({
         type: ALLCOMPLETED,
-    };
+    }), 'allCompleted'),
+
+    clearCompleted: withLog(() => ({
+        type: CLEARCOMPLETED,
+    }), 'clearCompleted'),
 };
 
-export const clearCompleted = () => {
-    return {
-        type: CLEARCOMPLETED,
-    };
-};
+
+export default TodoActions;
