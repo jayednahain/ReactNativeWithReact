@@ -4,29 +4,29 @@ import NavBar from './Componetns/NavBar'
 import Header from './Componetns/Header'
 import TodoList from './Componetns/TodoList'
 import Footer from './Componetns/Footer'
+import { GestureHandlerRootView } from 'react-native-gesture-handler'
 
 export default function HomePage() {
     return (
-        <View style={{margin: 5,height:"99%"}}>
-            <View style={{
-                padding: 5,
-                borderWidth: 1,
-                borderRadius: 5,
-                backgroundColor: '#EDECEB',
-                borderColor: '#D3D3D3'
-            }}>
-                <NavBar />
-                <Header />
-            </View>
-
-
-            <TodoList />
-
-            {/* <View style={{position:'absolute',bottom:0,zIndex:1}}> */}
+        <GestureHandlerRootView style={{}}>
+            <View style={{ margin: 5, height: '99%' }}>
+                <View style={styles.navbarAndHeaderStyle}>
+                    <NavBar />
+                    <Header />
+                </View>
+                <TodoList />
                 <Footer />
-            {/* </View> */}
-        </View>
+            </View>
+        </GestureHandlerRootView>
     )
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    navbarAndHeaderStyle: {
+        padding: 5,
+        borderWidth: 1,
+        borderRadius: 5,
+        backgroundColor: '#EDECEB',
+        borderColor: '#D3D3D3'
+    }
+})
