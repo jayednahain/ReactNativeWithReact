@@ -48,15 +48,6 @@ const Todo = ({ todo }) => {
         }
     };
 
-    // const onSelectPriorityColor = () => {
-    //     setIsSwiped(false);
-    //     Animated.timing(translateX, {
-    //         toValue: 0,
-    //         duration: 5000,
-    //         useNativeDriver: false,
-    //     }).start();
-    // };
-
     const onSelectColor = (currentLength) => {
         dispatched(TodoActions.colorSelected(id,currentLength));
         setIsSwiped(false);
@@ -147,10 +138,12 @@ const Todo = ({ todo }) => {
 
     return (
         <PanGestureHandler
+            failOffsetY={[-5, 5]}
+            activeOffsetX={[-5, 5]}
             onGestureEvent={onGestureEvent}
             onHandlerStateChange={onHandlerStateChange}
         >
-            <Animated.View style={{ transform: [{ translateX: translateX }], }}>
+            <Animated.View style={{ transform: [{ translateX: translateX }],marginVertical:0 }}>
                 <View style={{ flexDirection: 'row' }}>
                     {swapView()}
                     <View style={styles.cardContainer}>
