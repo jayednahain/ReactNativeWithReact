@@ -3,7 +3,13 @@ import React from 'react'
 
 export default function RemainingTaskShow() {
     return (
-        <View style={{backgroundColor:'red',position:'absolute',}}>
+        <View style={{
+            backgroundColor:'red',
+            position:'absolute',
+            bottom:70,
+            right:0,
+            marginRight:20
+            }}>
             <Text>RemainingTaskShow</Text>
         </View>
     )
