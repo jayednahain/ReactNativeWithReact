@@ -79,6 +79,18 @@ const initialState = [
         completed: false,
         color: "brown",
       },
+      {
+        id: 16,
+        text: "Master Git and GitHub workflows",
+        completed: false,
+        color: "brown",
+      },
+      {
+        id: 17,
+        text: "Master Git and GitHub workflows",
+        completed: false,
+        color: "brown",
+      },
   ];
   
 
