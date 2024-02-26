@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react'
 // import DrawerItem from 'react-native-paper/lib/typescript/components/Drawer/DrawerItem';
 import { Picker } from '@react-native-picker/picker';
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import DropDownItem from './DropDownItem';
 
 export default function DropDown({ items, onValueChange, placeholder,pickerStyle,alreadySelected }) {
     const [selectedValue, setSelectedValue] = useState('');
