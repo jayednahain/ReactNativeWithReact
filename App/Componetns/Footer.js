@@ -18,7 +18,7 @@ export default function Footer() {
             paddingVertical:10,
             borderWidth:1,
             borderColor:'gray',
-            backgroundColor:'blue',
+            backgroundColor:'#034883',
             borderTopLeftRadius:20,
             borderTopRightRadius:20,
 

@@ -186,12 +186,14 @@ export default Todo
 
 const styles = StyleSheet.create({
     cardContainer: {
+        backgroundColor:'#F0A140',
+        borderColor:'#F6B963',
         flex: 1,
         // width:"50%",
         borderWidth: 1,
         marginBottom: 10,
         // width: "90%",
-        borderRadius: 15,
+        borderRadius: 10,
         flexDirection: "row",
         paddingHorizontal: 0,
         paddingVertical: 0,
