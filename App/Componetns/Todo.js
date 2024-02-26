@@ -10,7 +10,7 @@ import DropDown from './DropDownCustom/DropDown';
 
 
 const Todo = ({ todo }) => {
-    let { text, id, completed } = todo;
+    let { text, id, completed,color } = todo;
     const dispatched = useDispatch();
     const [translateX] = useState(new Animated.Value(0));
     let [isLargeText, setIsLargeText] = useState(false);
@@ -58,7 +58,7 @@ const Todo = ({ todo }) => {
     // };
 
     const onSelectColor = (currentLength) => {
-        console.warn("currentLength: ",currentLength)
+        dispatched(TodoActions.colorSelected(id,currentLength));
         setIsSwiped(false);
     }
 
@@ -72,7 +72,7 @@ const Todo = ({ todo }) => {
         if (isSwiped) {
             return (
                 <DropDown
-                    alreadySelected = {"red"}
+                    alreadySelected = {color}
                     items={itemsObjects}
                     onValueChange={onSelectColor}
                     placeholder="Set Priority"
