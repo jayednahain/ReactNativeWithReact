@@ -6,13 +6,22 @@ import { fontStyle } from '../../Style/Style';
 export default function FooterTouchableButton(props) {
     let { title, onPress } = props;
     return (
-        <TouchableOpacity style={{
+        <TouchableOpacity 
+
+        onPress={()=>onPress}
+        
+        
+        style={{
             backgroundColor:'#4E7594',
             borderColor:'white',
             borderWidth:0.2,
-            // borderRadius:5,
-            paddingHorizontal:20
-            }} onPress={onPress}>
+            paddingHorizontal:20,
+
+            }} 
+            
+            
+            >
+            
             <Text style={[fontStyle.H3,{color:'white'}]}>{title}</Text>
         </TouchableOpacity>
     )

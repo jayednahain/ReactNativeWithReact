@@ -1,8 +1,11 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import FooterTouchableButton from './Buttons/FooterTouchableButton'
+import { useSelector } from 'react-redux'
 
 export default function Footer() {
+
+    const todoList = useSelector((state) => state.todos)
 
 
 
