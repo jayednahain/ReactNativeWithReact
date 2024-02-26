@@ -10,7 +10,7 @@ import DropDown from './DropDownCustom/DropDown';
 
 
 const Todo = ({ todo }) => {
-    let { text, id, completed,color } = todo;
+    let { text, id, completed, color } = todo;
     const dispatched = useDispatch();
     const [translateX] = useState(new Animated.Value(0));
     let [isLargeText, setIsLargeText] = useState(false);
@@ -32,10 +32,10 @@ const Todo = ({ todo }) => {
         if (nativeEvent.state === State.END) {
             const swipeThreshold = 100; // Adjust this threshold as needed
             if (nativeEvent.translationX > swipeThreshold) {
-                setIsSwiped(isModalVisible?false: true);
+                setIsSwiped(isModalVisible ? false : true);
             }
             else if (nativeEvent.translationX < -swipeThreshold) {
-                setModalVisible(isSwiped? false:true);
+                setModalVisible(isSwiped ? false : true);
             }
             else {
                 setIsSwiped(false);
@@ -49,7 +49,7 @@ const Todo = ({ todo }) => {
     };
 
     const onSelectColor = (currentLength) => {
-        dispatched(TodoActions.colorSelected(id,currentLength));
+        dispatched(TodoActions.colorSelected(id, currentLength));
         setIsSwiped(false);
     }
 
@@ -63,7 +63,7 @@ const Todo = ({ todo }) => {
         if (isSwiped) {
             return (
                 <DropDown
-                    alreadySelected = {color}
+                    alreadySelected={color}
                     items={itemsObjects}
                     onValueChange={onSelectColor}
                     placeholder="Set Priority"
@@ -86,7 +86,7 @@ const Todo = ({ todo }) => {
         setIsCollapsed(!isCollapsed);
     }
 
-    
+
 
     const onPressRadioButton = (id) => {
         setChecked(!isChecked);
@@ -124,8 +124,8 @@ const Todo = ({ todo }) => {
                         <Text style={fontStyle.H2}>Do you want to delete this task</Text>
                         <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
                             <Button background={'yellow'} style={{ borderWidth: 1, borderColor: 'green' }} labelStyle={[fontStyle.H3, { color: 'green' }]} title="Close Modal" onPress={() => hideModal()}>Cancel</Button>
-                            <Button background={'yellow'} style={{ borderWidth: 1, borderColor: 'red' }} labelStyle={[fontStyle.H3, { color: 'red' }]} title="Close Modal" 
-                            onPress={()=> onPressDelete(id)}>Delete</Button>
+                            <Button background={'yellow'} style={{ borderWidth: 1, borderColor: 'red' }} labelStyle={[fontStyle.H3, { color: 'red' }]} title="Close Modal"
+                                onPress={() => onPressDelete(id)}>Delete</Button>
                         </View>
                     </View>
 
@@ -143,10 +143,9 @@ const Todo = ({ todo }) => {
             onGestureEvent={onGestureEvent}
             onHandlerStateChange={onHandlerStateChange}
         >
-            <Animated.View style={{ transform: [{ translateX: translateX }],marginVertical:0 }}>
-                <View style={{ flexDirection: 'row' }}>
+            <Animated.View style={[{transform: [{ translateX: translateX }]},styles.cardContainer]}>
                     {swapView()}
-                    <View style={styles.cardContainer}>
+                    {/* <View style={styles.cardContainer}> */}
                         <RadioButton
                             status={isChecked ? 'checked' : 'unchecked'}
                             onPress={() => onPressRadioButton(id)}
@@ -165,16 +164,31 @@ const Todo = ({ todo }) => {
                                 </Text>
                                 {/* :null} */}
                             </Collapsible>
-                            <Collapsible collapsed={isCollapsed}>
+
+
+                            <Collapsible style={{position:'absolute'}} collapsed={isCollapsed}>
                                 <Text style={[{
                                     textDecorationLine: isChecked ? "line-through" : 'none',
                                     //  width: 300
                                 }, fontStyle.H3]}>{text}</Text>
                             </Collapsible>
                         </TouchableOpacity>
-                    </View>
-                </View>
-
+                        
+                    {/* </View> */}
+                    
+                    {
+                    // color?<View style={{ 
+                    //     backgroundColor: color, 
+                    //     width:"20%" , 
+                    //     height:"100%", 
+                        
+                    //     }}>
+                    //         {/* No content inside */}
+                    //     </View> : 
+                    //     null
+                        
+                        }
+                    
                 {renderModal()}
 
             </Animated.View>
@@ -186,18 +200,21 @@ export default Todo
 
 const styles = StyleSheet.create({
     cardContainer: {
-        backgroundColor:'#F0A140',
-        borderColor:'#F6B963',
-        flex: 1,
-        // width:"50%",
-        borderWidth: 1,
-        marginBottom: 10,
-        // width: "90%",
-        borderRadius: 10,
+        marginVertical:5,
         flexDirection: "row",
-        paddingHorizontal: 0,
-        paddingVertical: 0,
-        alignItems: 'center'
+        backgroundColor: '#F0A140',
+        // paddingHorizontal: 0,
+        // paddingVertical: 0,
+        alignItems: 'center',
+        // borderColor: '#F6B963',
+        // flex: 1,
+        // width:"50%",
+        // borderWidth: 1,
+        // marginBottom: 10,
+        // width: "90%",
+        // borderRadius: 10,
+        borderBottomStartRadius:15
+        
     }
 
 })
