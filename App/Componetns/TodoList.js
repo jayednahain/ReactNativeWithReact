@@ -18,7 +18,7 @@ export default function TodoList() {
 
     return (
             <FlatList
-                contentContainerStyle={{}}
+                contentContainerStyle={{marginHorizontal:10}}
                 keyExtractor={(item) => item.id.toString()}
                 data={todoList}
                 renderItem={renderItem}

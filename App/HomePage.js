@@ -9,7 +9,7 @@ import { GestureHandlerRootView } from 'react-native-gesture-handler'
 export default function HomePage() {
     return (
         <GestureHandlerRootView style={{}}>
-            <View style={{ margin: 5, height: '99%' }}>
+            <View style={{  height: '100%' }}>
                 <View style={styles.navbarAndHeaderStyle}>
                     <NavBar />
                     <Header />
