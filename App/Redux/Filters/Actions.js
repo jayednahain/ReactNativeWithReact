@@ -1,18 +1,19 @@
 import { COLORCHANGED, STATUSCHANGED } from "./ActionsTypes";
 
-export const colorChange = (color, changedType) => {
+export const colorChanged = (color, changeType) => {
     return {
-        typeof: COLORCHANGED,
+        type: COLORCHANGED,
         payload: {
-            color, changedType
-        }
-    }
-}
+            color,
+            changeType,
+        },
+    };
+};
 
-export const statusChange = (status) => {
+export const statusChanged = (status) => {
+    console.warn("",status)
     return {
-        typeof: STATUSCHANGED,
-        payload: status
-
-    }
-} 
+        type: STATUSCHANGED,
+        payload: status,
+    };
+};
