@@ -2,6 +2,7 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { fontStyle } from '../Style/Style';
+import UtilityFunctions from '../UtilityFunctions/UtilityFunctions';
 
 export default function RemainingTaskShow() {
 
@@ -22,7 +23,7 @@ export default function RemainingTaskShow() {
             // borderRadius:25
             
         }}>
-            <Text style={[{color:'white'},fontStyle.H3]}>Task left {todoListNotCompleted}</Text>
+            <Text style={[{color:'white'},fontStyle.H3]}>{UtilityFunctions.remainingTaskText(todoListNotCompleted)}</Text>
         </View>
     )
 }
