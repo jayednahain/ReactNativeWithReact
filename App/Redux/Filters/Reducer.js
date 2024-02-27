@@ -8,6 +8,8 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 status: action.payload
             }
+
+            
         case COLORCHANGED:
             //3.4-1
             const { color, changeType } = action.payload;
