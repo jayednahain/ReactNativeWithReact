@@ -2,12 +2,16 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import FooterTouchableButton from './Buttons/FooterTouchableButton'
 import { useSelector } from 'react-redux'
-
+import { useDispatch } from 'react-redux'
+// import {Fil} from '../Redux/Filters/Actions'
+import { statusChanged } from '../Redux/Filters/Actions'
 export default function Footer() {
-
+    const dispatch = useDispatch();
     const todoList = useSelector((state) => state.todos)
 
-
+    const handleStatusChange =(status)=>{
+        dispatch(statusChanged(status));
+    }
 
     return (
         <View style={{
@@ -26,9 +30,9 @@ export default function Footer() {
             borderTopRightRadius:20,
 
             }}>
-                <FooterTouchableButton title={'All'}/>
-                <FooterTouchableButton title={'Incomplete'}/>
-                <FooterTouchableButton title={'Complete'}/>
+                <FooterTouchableButton onPress={()=>handleStatusChange("All")} title={'All'}/>
+                <FooterTouchableButton onPress={()=>handleStatusChange("Incomplete")} title={'Incomplete'}/>
+                <FooterTouchableButton onPress={()=>handleStatusChange("Complete")} title={'Complete'}/>
         </View>
     )
 }
