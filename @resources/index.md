@@ -36,3 +36,8 @@
 
 ### //3.5 create store
 - root reducer we will combine files
+
+### //3.7-1
+- color change action added
+
+
