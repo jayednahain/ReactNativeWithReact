@@ -6,7 +6,7 @@ const UtilityFunctions = {
             case 1:
                 return "1 task left";
             default:
-                return `${numberOfTodos} tasks`;
+                return `${numberOfTodos} tasks Left`;
         }
     }
 };

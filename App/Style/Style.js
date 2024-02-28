@@ -16,12 +16,21 @@ const fontStyle = StyleSheet.create({
         fontWeight: 'bold',
         lineHeight: 24,
     },
+    H4: {
+        fontSize: 16,
+        fontWeight: 'bold',
+        lineHeight: 20,
+    },
 
 })
 
 const border = StyleSheet.create({
 
 })
+
+const color = {
+    
+}
 
 export {fontStyle,border}
 
