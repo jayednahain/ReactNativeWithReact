@@ -1,15 +1,14 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
-import FlexBasis from './CSSDesigen/FlexBesis'
-import FlexShrink from './CSSDesigen/FlexShrink'
-import DynamicUi from './ReactNativeFeature/DynamicUi'
+import ReferenceClassComponent from './ReactNativeFeature/Reference/ReferenceClassComponent'
+import Form from './ReactNativeFeature/Reference/Form'
+
 
 export default function MyApp() {
     return (
-        <View style={{flex:1}}>
-            {/* <FlexBasis/> */}
-            {/* <FlexShrink /> */}
-            <DynamicUi/>
+        <View style={{ flex: 1 }}>
+            {/* <ReferenceClassComponent/> */}
+            <Form/>
         </View>
             
   )
