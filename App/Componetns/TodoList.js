@@ -24,13 +24,22 @@ export default function TodoList() {
         }
     })
     //3.8
-    .filter(todo => {
-        const { colors } = filters;
-        if (colors.length>0){
-            return colors.includes(todo.color)
-        }
+    // .filter(todo => {
+    //     const { colors } = filters;
+    //     if (colors.length>0){
+    //         return colors.includes(todo.color)
+    //     }
 
-    });
+    // }
+    
+    
+    // );
+
+    const sortedTodoList = [...filteredTodoList].sort((a, b) => (a.id || 0) - (b.id || 0));
+
+
+    // const sortedTodoList = [...filteredTodoList].sort((a, b) => a.id - b.id);
+
 
     const renderItem = ({ item }) => (
         <Todo todo={item} key={item.id} />
@@ -38,8 +47,8 @@ export default function TodoList() {
     return (
         <FlatList
             contentContainerStyle={{ marginHorizontal: 10, paddingBottom: 40 }}
-            keyExtractor={(item) => item.id.toString()}
-            data={filteredTodoList}
+            keyExtractor={(item) => item.id?.toString()}
+            data={sortedTodoList}
             renderItem={renderItem}
         />
     );

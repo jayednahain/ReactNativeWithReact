@@ -1,27 +1,32 @@
 import initialState from "./InitialState";
 import { ADDED, TOGGLED, COLORSELECTED, DELETED, ALLCOMPLETED, CLEARCOMPLETED } from "./ActionsType";
 
-const nextTodoId = (todo) => {
-    const maxId = todo.reducer((maxId, todo) => Math.max(todo.id, maxId), -1);
-    return maxId + 1
-}
-
-// const extractIds = (todos) => todos.map(todo => todo.id);
-
-// const nextTodoId = (todos) => {
-//     const idArray = extractIds(todos);
-//     const maxId = Math.max(...idArray, -1);
-//     return maxId + 1;
+// const nextTodoId = (todo) => {
+//     console.warn("todo: ",JSON.stringify(todo) )
+//     const maxId = todo.reducer((maxId, todo) => Math.max(todo.id, maxId), -1);
+//     return maxId + 1
 // }
+
+const extractIds = (todos) => todos.map(todo => todo.id);
+
+const nextTodoId = (todos) => {
+    const idArray = extractIds(todos);
+    const maxId = Math.max(...idArray, -1);
+    return maxId + 1;
+}
 
 
 const reducer = (state = initialState, action) => {
+    console.warn(action)
     switch (action.type) {
         case ADDED:
             return [
                 ...state,
                 {
                     id: nextTodoId(state),
+                    text: action.payload,
+                    completed:false
+
                 },
             ];
 

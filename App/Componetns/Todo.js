@@ -160,7 +160,7 @@ const Todo = ({ todo }) => {
                                         // width: 350
                                     }, fontStyle.H4]}
                                     onTextLayout={handleTextLayout}>
-                                    {text}
+                                    {`${id}- ${text}`}
                                 </Text>
                                 {/* :null} */}
                             </Collapsible>
