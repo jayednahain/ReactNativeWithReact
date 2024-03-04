@@ -1,5 +1,5 @@
 import initialState from "./InitialState";
-import { ADDED, TOGGLED, COLORSELECTED, DELETED, ALLCOMPLETED, CLEARCOMPLETED } from "./ActionsType";
+import { ADDED, TOGGLED, COLORSELECTED, DELETED, ALLCOMPLETED, CLEARCOMPLETED, LOADED } from "./ActionsType";
 
 // const nextTodoId = (todo) => {
 //     console.warn("todo: ",JSON.stringify(todo) )
@@ -19,6 +19,11 @@ const nextTodoId = (todos) => {
 const reducer = (state = initialState, action) => {
     console.warn(action)
     switch (action.type) {
+
+        case LOADED:
+            // returning payload list directly
+            return action.payload;
+
         case ADDED:
             return [
                 ...state,

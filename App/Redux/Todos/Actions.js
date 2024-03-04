@@ -5,6 +5,7 @@ import {
     COLORSELECTED,
     DELETED,
     TOGGLED,
+    LOADED
 } from "./ActionsType";
 
 // export const added = (todoText) => {
@@ -59,6 +60,12 @@ const withLog = (actionCreator, actionName)  => (...args) => {
 };
 
 const TodoActions = {
+
+    loaded: withLog((todos) => ({
+        type: LOADED,
+        payload: todos,
+    }), 'added'),
+
     added: withLog((todoText) => ({
         type: ADDED,
         payload: todoText,
