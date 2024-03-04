@@ -1,14 +1,21 @@
 import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import React, { useEffect } from 'react'
 import Todo from './Todo'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { FlatList, ScrollView } from 'react-native-gesture-handler'
-import { UseSelector } from 'react-redux/es/hooks/useSelector'
+// import { UseSelector } from 'react-redux/es/hooks/useSelector'
+import fetchTodos from '../Redux/Thunk/FatchTodos'
 
 export default function TodoList() {
 
     const todoList = useSelector((state) => state.todos)
     const filters = useSelector((state) => state.filters)
+    const dispatch = useDispatch();
+    
+    useEffect(()=>{
+        dispatch(fetchTodos)
+    },[dispatch])
+
     //3.8
     const filteredTodoList = todoList.filter(todo => {
         const { status } = filters;
