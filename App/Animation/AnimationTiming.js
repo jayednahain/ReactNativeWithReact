@@ -1,7 +1,7 @@
 import { Animated, StyleSheet, Text, TouchableOpacity, View, Dimensions } from 'react-native'
 import React, { useEffect, useState } from 'react'
 
-export default function CustomAnimation() {
+export default function AnimationTiming() {
     const { width, height } = Dimensions.get('window');
 
     let leftValue = useState(new Animated.Value(0))[0]
@@ -30,18 +30,19 @@ export default function CustomAnimation() {
         return animationConfig
     }
 
+    // customAnimation = (value) =>  Animated.timing(
+    //     rightMarginValue, calculateValue(value)
+    // )
+
     onPress = () => {
         console.warn("width: ", width)
-        Animated.timing(
-            rightMarginValue, calculateValue(250)
-        ).start(() => {
+        Animated.timing(rightMarginValue, calculateValue(250))
+            .start(() => {
             Animated.timing(
                 topMarginValue, calculateValue(500)
             ).start(() => {
                 console.warn("rightMarginValue: ",rightMarginValue)
-                Animated.timing(
-                    rightMarginValue, calculateValue(0)
-                )
+                
             })
         })
 
