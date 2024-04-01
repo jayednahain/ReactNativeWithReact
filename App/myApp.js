@@ -6,6 +6,7 @@ import AnimationWithTranslate from './Animation/AnimationWithTranslate'
 import AnimationFadeInFadeOut from './Animation/Animation10FadeInFadeOut'
 
 export default function MyApp() {
+    // https://www.youtube.com/playlist?list=PLYxzS__5yYQmdfEyKDrlG5E0F0u7_iIUo
     return (
         <View style={{ }}>
             {/* <AnimationTiming /> */}
