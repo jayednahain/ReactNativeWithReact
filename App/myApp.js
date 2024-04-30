@@ -4,6 +4,7 @@ import LifeCycle from './LifeCycle'
 import AnimationTiming from './Animation/AnimationTiming'
 import AnimationWithTranslate from './Animation/AnimationWithTranslate'
 import AnimationFadeInFadeOut from './Animation/Animation10FadeInFadeOut'
+import Animation13PanresRonder from './Animation/Animation13Panresponder'
 
 export default function MyApp() {
     // https://www.youtube.com/playlist?list=PLYxzS__5yYQmdfEyKDrlG5E0F0u7_iIUo
@@ -11,7 +12,8 @@ export default function MyApp() {
         <View style={{ }}>
             {/* <AnimationTiming /> */}
             {/* <AnimationWithTranslate/> */}
-            <AnimationFadeInFadeOut/>
+            {/* <AnimationFadeInFadeOut/> */}
+            <Animation13PanresRonder/>
         </View>
 
     )
