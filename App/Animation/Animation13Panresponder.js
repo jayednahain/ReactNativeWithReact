@@ -67,16 +67,20 @@ export default function Animation13PanresRonder() {
                 // console.log("windowWidth",windowWidth)
                 // pan.x.setValue(gesture.dx);
                 // pan.y.setValue(gesture.dy);
-                // pan.extractOffset();
+                pan.extractOffset();
             },
         }),
     )[0];
 
 
     // console.log( panResponder.panHandlers)
-    console.log(pan.getLayout())
+    console.log(pan)
     return (
         <View>
+
+            <View>
+                <Text></Text>
+            </View>
             <Animated.View
                 style={
                     [{
