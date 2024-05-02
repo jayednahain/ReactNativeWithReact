@@ -10,7 +10,6 @@ export default function MyApp() {
     // https://www.youtube.com/playlist?list=PLYxzS__5yYQmdfEyKDrlG5E0F0u7_iIUo
     return (
         <View style={{ }}>
-            {/* <AnimationTiming /> */}
             {/* <AnimationWithTranslate/> */}
             {/* <AnimationFadeInFadeOut/> */}
             <Animation13PanresRonder/>

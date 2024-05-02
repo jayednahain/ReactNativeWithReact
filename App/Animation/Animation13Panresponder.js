@@ -3,18 +3,34 @@ import React, { useState } from 'react'
 
 export default function Animation13PanresRonder() {
 
-    const pen = useState(new Animated.ValueXY())[0];
-    const penResponder = useState(
+    const pan = useState(new Animated.ValueXY())[0];
+
+
+
+
+    const panResponder = useState(
+
+        // create a responder
+        // hey are you there ? yes im here
+        // on every single touch , what operating system will do
+        // - broad cast a message to the application which is currently running
         PanResponder.create({
-            onMoveShouldSetPanResponder: (event, gestureState) => {
-                console.log("onMoveShouldSetPanResponder: ",event)
-                return true
+            onMoveShouldSetPanResponder: () => true,
+            onPanResponderGrant: () => { 
+                // if onMoveShouldSetPanResponder return true , onPanResponderGrant will run
+                pan.setOffset({
+                    x: pan.x._value,
+                    y: pan.y._value
+                })
             },
-            onPanResponderMove: () => { },
-            onPanResponderRelease: () => { }
-        })
-    );
-    
+            onPanResponderMove: Animated.event([null, { dx: pan.x, dy: pan.y }]),
+            onPanResponderRelease: () => {
+                pan.extractOffset();
+            },
+        }),
+    )[0];
+
+
 
 
     return (
@@ -25,15 +41,9 @@ export default function Animation13PanresRonder() {
                     height: 100,
                     width: 100,
                     borderRadius: 100 / 2,
-                    transform: [{
-                        
-                    }]
+
                 }}
-
-                {...penResponder.pan}
-
             />
-            <Text>Move me baby</Text>
         </View>
     )
 }
