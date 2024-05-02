@@ -19,14 +19,23 @@ export default function Animation13PanresRonder() {
             onMoveShouldSetPanResponder: () => true,
             onPanResponderGrant: () => {
                 // if onMoveShouldSetPanResponder return true , onPanResponderGrant will run
-                console.log("access confirm !")
+                console.log("### access confirm !")
                 pan.setOffset({
                     x: pan.x._value,
                     y: pan.y._value
                 })
             },
-            onPanResponderMove: Animated.event([null, { dx: pan.x, dy: pan.y }]),
+            // onPanResponderMove: Animated.event([null, { dx: pan.x, dy: pan.y }]),
+            //dx and dy delta value
+            // relative distance of current position and new position
+
+            // vx, vy are the velocity value
+            onPanResponderMove: (...args) => {
+                console.log("onPanResponderMove__ run")
+            },
+
             onPanResponderRelease: () => {
+                console.log("__onPanResponderRelease!")
                 pan.extractOffset();
             },
         }),
