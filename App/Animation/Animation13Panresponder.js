@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 
 export default function Animation13PanresRonder() {
 
+    // const pan = useState(new Animated.ValueXY())[0];
     const pan = useState(new Animated.ValueXY())[0];
 
 
@@ -16,8 +17,9 @@ export default function Animation13PanresRonder() {
         // - broad cast a message to the application which is currently running
         PanResponder.create({
             onMoveShouldSetPanResponder: () => true,
-            onPanResponderGrant: () => { 
+            onPanResponderGrant: () => {
                 // if onMoveShouldSetPanResponder return true , onPanResponderGrant will run
+                console.log("access confirm !")
                 pan.setOffset({
                     x: pan.x._value,
                     y: pan.y._value
@@ -31,18 +33,24 @@ export default function Animation13PanresRonder() {
     )[0];
 
 
-
-
+    // console.log( panResponder.panHandlers)
+    console.log(pan.getLayout())
     return (
         <View>
             <Animated.View
-                style={{
-                    backgroundColor: "red",
-                    height: 100,
-                    width: 100,
-                    borderRadius: 100 / 2,
-
-                }}
+                style={
+                    [{
+                        backgroundColor: "red",
+                        height: 100,
+                        width: 100,
+                        borderRadius: 100 / 2,
+    
+                    }, pan.getLayout()]
+                    
+                    
+                    
+            }
+                {...panResponder.panHandlers}
             />
         </View>
     )
