@@ -1,16 +1,10 @@
 
 import React from 'react';
-import type {PropsWithChildren} from 'react';
-import { Provider } from 'react-redux';
-
-import MyApp from './App/myApp';
-import NativeModuleTest from './App/NativeModuleTest';
+import ReduxMosh from './App/ReduxMosh';
 
 function App(): JSX.Element {
-  return (
-
-    <NativeModuleTest/>
-    
+  return ( 
+    <ReduxMosh/>
   );
 }
 
